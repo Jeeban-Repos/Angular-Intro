@@ -1,0 +1,36 @@
+<div class="container bg-light ">
+	<h1 class="display-1">{{message()}}</h1>
+	<button class="btn btn-primary" (click)="myFun()">Event binding</button><br>
+	<input type="text" [value]="text"><br>
+	<h2>In this class binding the button got disabled.</h2>
+	<button class="btn btn-danger" [class.disabled]="disabled()">Class binding</button>
+	<br>
+	<hr>
+
+	<br><br>
+	<div class="container">
+		<table class="table table-striped ">
+			<caption>Angular iteration over the list of JSON objects started using *ngFor and *ngIf</caption>
+			<thead *ngIf="products.length > 0">
+				<tr>
+					<th>Product Id</th>
+					<th>Product Name</th>
+					<th>Product Price</th>
+				</tr>
+			</thead>
+			<tbody *ngFor="let prod of products">
+				<tr>
+					<td>{{prod.prodId}}</td>
+					<td>{{prod.prodName}}</td>
+					<td>{{prod.prodPrice}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+
+		<h1>Two way data binding</h1>
+		<input type="text" name="" [(ngModel)]="messages">
+		{{messages}}
+	</div>
+</div>

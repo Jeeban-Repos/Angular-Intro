@@ -1,0 +1,31 @@
+.img-cont1{
+	
+  margin-top: 100px;
+	background-image: url("/assets/images/covid-img1.jpg");
+	background-size: contain;
+	/* background-repeat: no-repeat; */
+  
+}
+.img-cont2{
+		
+	background-image: url("/assets/images/covid-img3.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.img-animate {
+    
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+
+  0%   {left:0px; top:0px;}
+  25%  {margin-left:20px; top:0px; margin-right:20px;}
+}

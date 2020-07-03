@@ -1,0 +1,21 @@
+<div class="container bg-light">
+    <table class="table table-striped ">
+        <caption>Angular iteration over the list of JSON objects started using *ngFor and *ngIf</caption>
+        <thead *ngIf="books.length > 0">
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Book Price</th>
+                <th>Book Auther</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let book of books">
+            <tr>
+                <td>{{book.bookId}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.bookPrice}}</td>
+                <td>{{book.bookAuthor}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
