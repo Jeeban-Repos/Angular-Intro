@@ -35,10 +35,9 @@ We can use  only string values for binding.
 Property binding in Angular
 ---------------------
 Binding values to the html attributes from the compoent class
-
 syntax : <input type="text" [value]="propertyvalue"/>
 We can use  any values for binding.
-==========================================
+
 Event Binding
 -----------
 If any event is rising then data should be bind.
@@ -49,8 +48,8 @@ To bind any predefine property of bootstrap or any custome css class perperty
 syntax : [class]="css/bootstrap class name"
 
 Iteration of list of object in Angular
-============================
-syntax : *ngFor = let <var> of <listObj>
+------------------------------
+syntax : *ngFor = let (any variable) of (listObject)
 example : <div *ngFor="let prod of products"  class="bg-success">
 		<div>{{prod.prodId}}</div>
 		<div>{{prod.prodName}}</div>
