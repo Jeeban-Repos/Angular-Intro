@@ -16,6 +16,7 @@ Command to create a new Service
 ----------------------------
 Service is given for dependancy injection
 > ng g s <service-name>
+
 Angular Service is Created and then import this service to the angular module (app.module.ts).
 Specify all the custom Service inside the Providers array.
 
