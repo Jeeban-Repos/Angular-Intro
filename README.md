@@ -1,3 +1,6 @@
+Angular
+=========
+
 Command to create a new component
 -----------------------------
 > ng g c <component name>
@@ -9,7 +12,6 @@ Command to create a new component
 Angular SwitchCase
 ----------------
 
-==================================================
 Command to create a new Service
 ----------------------------
 Service is given for dependancy injection
@@ -81,7 +83,7 @@ export class TestComponent implements OnInit {
 }
 
 Two way data binding
-==================
+-----------------
 Binding data from html to property and property to Html.
 syantax : [(ngModel)]="proprerty"
 Example :
