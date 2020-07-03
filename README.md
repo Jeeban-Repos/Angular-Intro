@@ -29,7 +29,7 @@ product is the property 'any' can be any type(String, boolean etc)
 Interpolation
 ----------
 What interpolation can and can not do ?
-syntax : <h1>{{mathod/variable}}</h1>
+syntax : <span>{{mathod/variable}}</span>
 Using this we can bind data to the data from compoent  class to the  templet.
 We can use  only string values for binding.
 
