@@ -1,27 +1,97 @@
-# AngularIntroApp
+Command to create a new component
+-----------------------------
+> ng g c <component name>
+	g -> generate
+	c -> Component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+@NgModule in app.module.ts contains Components in a array.
+==================================================
+Angular SwitchCase
+----------------
 
-## Development server
+==================================================
+Command to create a new Service
+----------------------------
+Service is given for dependancy injection
+> ng g s <service-name>
+Angular Service is Created and then import this service to the angular module (app.module.ts).
+Specify all the custom Service inside the Providers array.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+===================================================
+syntax for Properties
+-----------------
+public products : any = "";
+product is the property 'any' can be any type(String, boolean etc)
 
-## Code scaffolding
+==================================
+Interpolation
+----------
+What interpolation can and can not do ?
+syntax : <h1>{{mathod/variable}}</h1>
+Using this we can bind data to the data from compoent  class to the  templet.
+We can use  only string values for binding.
+=======================================
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Property binding in Angular
+---------------------
+Binding values to the html attributes from the compoent class
 
-## Build
+syntax : <input type="text" [value]="propertyvalue"/>
+We can use  any values for binding.
+==========================================
+Event Binding
+-----------
+If any event is rising then data should be bind.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Class binding
+----------
+To bind any predefine property of bootstrap or any custome css class perperty
+syntax : [class]="css/bootstrap class name"
 
-## Running unit tests
+iteration of list of object in Angular
+============================
+syntax : *ngFor = let <var> of <listObj>
+example : <div *ngFor="let prod of products"  class="bg-success">
+		<div>{{prod.prodId}}</div>
+		<div>{{prod.prodName}}</div>
+		<div>{{prod.prodPrice}}</div>
+	</div>
+export class TestComponent implements OnInit {
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  constructor() { }
+  ngOnInit(): void {
+  }
 
-## Running end-to-end tests
+ public products:any = [
+      {
+        "prodId":1,
+        "prodName":"Fan",
+        "prodPrice":2000,
+      },
+      {
+        "prodId":2,
+        "prodName":"AC",
+        "prodPrice":7000,
+      },
+      {
+        "prodId":3,
+        "prodName":"Watch",
+        "prodPrice":12000,
+      },
+    ];
+}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Two way data binding
+==================
+Binding data from html to property and property to Html.
+syantax : [(ngModel)]="proprerty"
+Example :
+<div>
+ <h1>Two way data binding</h1>
+ <input type="text" name="" [(ngModel)]="messages">
+ {{messages}}
+</div>
+import form module in app.module.ts
+---------------------------------
+Note :
+Use CORS in the client side for getting the response.
