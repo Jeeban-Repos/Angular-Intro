@@ -48,7 +48,7 @@ Class binding
 To bind any predefine property of bootstrap or any custome css class perperty
 syntax : [class]="css/bootstrap class name"
 
-iteration of list of object in Angular
+Iteration of list of object in Angular
 ============================
 syntax : *ngFor = let <var> of <listObj>
 example : <div *ngFor="let prod of products"  class="bg-success">
@@ -87,11 +87,12 @@ Binding data from html to property and property to Html.
 syantax : [(ngModel)]="proprerty"
 Example :
 <div>
- <h1>Two way data binding</h1>
  <input type="text" name="" [(ngModel)]="messages">
  {{messages}}
-</div>
+</div>.
 import form module in app.module.ts
----------------------------------
+
+Important Notes :
+--------------
 Note :
-Use CORS in the client side for getting the response.
+Use CORS filter in the client side for getting the response for rest call.
