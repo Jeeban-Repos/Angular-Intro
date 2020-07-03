@@ -19,20 +19,19 @@ Service is given for dependancy injection
 Angular Service is Created and then import this service to the angular module (app.module.ts).
 Specify all the custom Service inside the Providers array.
 
-===================================================
+
 syntax for Properties
 -----------------
 public products : any = "";
 product is the property 'any' can be any type(String, boolean etc)
 
-==================================
+
 Interpolation
 ----------
 What interpolation can and can not do ?
 syntax : <h1>{{mathod/variable}}</h1>
 Using this we can bind data to the data from compoent  class to the  templet.
 We can use  only string values for binding.
-=======================================
 
 Property binding in Angular
 ---------------------
