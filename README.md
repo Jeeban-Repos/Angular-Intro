@@ -5,7 +5,7 @@ Command to create a new component
 	c -> Component
 
 @NgModule in app.module.ts contains Components in a array.
-==================================================
+
 Angular SwitchCase
 ----------------
 
