@@ -11,6 +11,7 @@ Command to create a new component
 
 Angular SwitchCase
 ----------------
+Angular Switch case for filtering the elements.
 
 Command to create a new Service
 ----------------------------
