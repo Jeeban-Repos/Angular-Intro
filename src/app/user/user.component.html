@@ -1,29 +1,27 @@
-<div class="container bg-success text-light">
+<div class="container text-dark">
     <h1 class="display-1">HttpClient for rest call</h1>
-    <br><br>
-    <div class="bg-light">
-        <div class="container ">
-            <table class="table table-striped text-dark bg-white">
-                <!-- <caption>Rest call using HttpClient and iterating the list of json object using *ngIf and *ngFor</caption> -->
-                <thead *ngIf="users.length > 0">
-                    <tr>
-                        <th>User Id</th>
-                        <th>User Name</th>
-                        <th>User email</th>
-                        <th>Username</th>
-                        <th>User zipcode</th>
-                    </tr>
-                </thead>
-                <tbody *ngFor="let user of users">
-                    <tr>
-                        <td>{{user.id}}</td>
-                        <td>{{user.name}}</td>
-                        <td>{{user.email}}</td>
-                        <td>{{user.username}}</td>
-                        <td>{{user.address.zipcode}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="container bg-light"><br><br>
+        <input type="text" [(ngModel)]="searchName">
+        <table class="table table-striped text-dark bg-white">
+            <!-- <caption>Rest call using HttpClient and iterating the list of json object using *ngIf and *ngFor</caption> -->
+            <thead *ngIf="users.length > 0">
+                <tr>
+                    <th>User Id</th>
+                    <th>User Name</th>
+                    <th>User email</th>
+                    <th>Username</th>
+                    <th>User zipcode</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let user of users | namefilter : searchName ">
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.address.zipcode}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-<div>
+</div>

@@ -1,4 +1,4 @@
-<div class="container bg-light ">
+<!-- <div class="container bg-light ">
 	<h1 class="display-1">{{message()}}</h1>
 	<button class="btn btn-primary" (click)="myFun()">Event binding</button><br>
 	<input type="text" [value]="text"><br>
@@ -33,4 +33,9 @@
 		<input type="text" name="" [(ngModel)]="messages">
 		{{messages}}
 	</div>
+</div> -->
+
+<div class="container bg-light">
+	<h3 class="display-4">Custome pipeline</h3>
+	<h4 class="display-4">Age :&nbsp; {{dob}}&nbsp; {{dob | age}}</h4>	
 </div>

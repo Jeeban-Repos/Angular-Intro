@@ -1,0 +1,43 @@
+<div class="container bg-light">
+    <h1 class="display-1">SwitchCase example</h1>
+    <button class="btn btn-primary" (click)="isActive()">Active Sataus</button>&nbsp;
+    <button class="btn btn-primary" (click)="isNotActive()">All Sataus</button>&nbsp;
+    <table class="table table-striped ">
+        <caption>Angular iteration over the list of JSON objects started using *ngFor and *ngIf</caption>
+        <thead *ngIf="activities.length > 0">
+            <tr>
+                <th>Activity ID</th>
+                <th>Activity Title</th>
+                <th>Activity DueDate</th>
+                <th>Activity Status</th>
+                <th>Activity Message</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let activity of activities">
+            <tr>
+                <td>{{activity.ID}}</td>
+                <td>{{activity.Title}}</td>
+                <td>{{activity.DueDate}}</td>
+                <td>{{activity.Completed}}</td>
+                <td><div [ngSwitch]="activity.Completed">
+                    <span *ngSwitchCase="true">{{activeMsg}}</span>
+                    <span *ngSwitchCase="false">{{inActiveMsg}}</span>
+                    <span *ngSwitchDefault>--NA--</span>
+                </div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <h1 class="display-4">{{message | titlecase}} Camel case example</h1>
+    <h1 class="display-4">{{message | uppercase}} uppercase case example</h1>
+    <h3 class="display-6">{{date}} Date</h3>
+    <h1 class="display-4">{{date | date : 'short'}} Shorter Form</h1>
+    <h1 class="display-4">{{date | date : 'shortTime'}} Shorter Time example</h1>
+    <h1 class="display-4">{{date | date : 'shortDate'}} Shorter Date example</h1>
+    <h1 class="display-4">{{amount | currency : 'INR'}} Currency example</h1>
+    <h1 class="display-4">DSON data example</h1>
+    <p class="display-6 container bg-light">{{activities | json}} </p>
+</div>
+

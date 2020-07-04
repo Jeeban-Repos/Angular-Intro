@@ -9,6 +9,7 @@ import { ProductServiceService } from '../product-service.service';
 export class TestComponent implements OnInit {
 
   public products : any
+  public dob : any = "1996-06-24";
 
   constructor(private service : ProductServiceService) {
 

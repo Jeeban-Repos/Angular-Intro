@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserComponent implements OnInit {
 
   public users : any=[];
+  public searchName : string="";
   constructor(private http : HttpClient) { }
 
   ngOnInit(): void {

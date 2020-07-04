@@ -12,6 +12,9 @@ import { ProductServiceService } from "./product-service.service";
 import { TestComponent } from './test/test.component';
 import { UserComponent } from './user/user.component';
 import { BookComponent } from './book/book.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { AgePipe } from './age.pipe';
+import { NamefilterPipe } from './namefilter.pipe';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { BookComponent } from './book/book.component';
     HeaderComponent,
     UserComponent,
     BookComponent,
+    ActivitiesComponent,
+    AgePipe,
+    NamefilterPipe,
   ],
   imports: [
     BrowserModule,

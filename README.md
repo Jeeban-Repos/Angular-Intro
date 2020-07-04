@@ -93,6 +93,13 @@ Example :
 </div>.
 import form module in app.module.ts
 
+Command for creating custom Angular pipe
+----------------------------------
+>ng g p "pipename"
+Pipe is useful for filter out some data and do some operation on that data.
+Some custom pipes are also available.
+ex-: {message | titlecase}} Camel case example
+
 Important Notes :
 --------------
 Note :
